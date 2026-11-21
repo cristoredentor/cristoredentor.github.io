@@ -1,0 +1,47 @@
+<!doctype html><html lang="es"><meta charset="utf-8">
+<title>Preview pantalla inicial</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<!-- Prototipo de referencia para el subagente de animación: NO es la página final. -->
+<style>
+body{margin:0;background:#1E2529;display:grid;place-items:center;min-height:100vh}
+.escena{position:relative;width:min(100vw,1280px);aspect-ratio:16/9;overflow:hidden}
+.escena>object,.escena>img{position:absolute;inset:0;width:100%;height:100%;image-rendering:pixelated}
+.pj{position:absolute;left:50%;bottom:6%;width:22%;aspect-ratio:1;transform:translateX(-50%);
+ background:url(../../personajes/cristopher/cristopher-hoja.svg) 0 0/300% 100% no-repeat;image-rendering:pixelated;
+ animation:saluda 1s steps(1) infinite}
+@keyframes saluda{0%{background-position:50% 0}50%{background-position:100% 0}}
+.escena>.mascota{position:absolute;inset:auto;height:auto;bottom:9%;width:7%;filter:saturate(.7);image-rendering:pixelated;animation:pasea 14s linear infinite}
+.escena>.m2{animation-delay:-5s;width:6%}.escena>.m3{animation-delay:-10s;width:6.5%}
+@keyframes pasea{0%{left:-10%;transform:translateY(0)}25%{transform:translateY(-6%)}50%{transform:translateY(0)}
+75%{transform:translateY(-6%)}100%{left:110%;transform:translateY(0)}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important}}
+</style>
+<div class="escena">
+ <object data="capa-1-cielo-sol.svg" type="image/svg+xml"></object>
+ <object data="capa-2-nubes.svg" type="image/svg+xml"></object>
+ <object data="capa-3-montanas.svg" type="image/svg+xml"></object>
+ <object data="capa-4-colinas.svg" type="image/svg+xml"></object>
+ <object data="capa-5-arboles-fondo.svg" type="image/svg+xml" class="anim"></object>
+ <object data="capa-6-pasto-arboles-frente.svg" type="image/svg+xml" class="anim"></object>
+ <img class="mascota m1" src="../../mascotas/ember-fox.svg" alt="">
+ <img class="mascota m2" src="../../mascotas/crystal-owl.svg" alt="">
+ <img class="mascota m3" src="../../mascotas/mini-golem.svg" alt="">
+ <div class="pj" role="img" aria-label="Cristopher saludando"></div>
+ <object data="capa-7-viento-hojas.svg" type="image/svg+xml" class="anim"></object>
+</div>
+<script>
+// Inyecta en cada SVG las animaciones de viento (mecer árboles, ráfagas, hojas, nubes).
+const css=`.arbol{animation:mece 3.2s ease-in-out infinite;animation-delay:calc(var(--i)*-.37s)}
+.mata{animation:mece 1.6s ease-in-out infinite;animation-delay:calc(var(--i)*-.13s)}
+@keyframes mece{0%,100%{transform:skewX(0)}50%{transform:skewX(-6deg)}}
+.rafaga{animation:sopla 4s linear infinite;animation-delay:calc(var(--i)*-.6s)}
+@keyframes sopla{0%{transform:translateX(330px);opacity:0}15%{opacity:1}100%{transform:translateX(-360px);opacity:0}}
+.hoja{animation:vuela 6s linear infinite;animation-delay:calc(var(--i)*-.45s)}
+@keyframes vuela{0%{transform:translate(330px,-20px) rotate(0)}100%{transform:translate(-340px,25px) rotate(720deg)}}
+.nube{animation:deriva 90s linear infinite;animation-delay:calc(var(--i)*-13s)}
+@keyframes deriva{0%{transform:translateX(0)}100%{transform:translateX(-340px)}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important}}`;
+document.querySelectorAll('object').forEach(o=>o.addEventListener('load',()=>{
+ const d=o.contentDocument; if(!d) return; const s=d.createElementNS('http://www.w3.org/2000/svg','style');
+ s.textContent=css; d.documentElement.appendChild(s);}));
+</script>

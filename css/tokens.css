@@ -1,0 +1,58 @@
+/* Copia de diseno/tokens.css. La fuente se carga con <link> en el HTML (más rápido que @import). */
+/* Tokens de diseño del sitio — fuente única de colores, tipografía y espaciado.
+   Paleta azul-grisácea tomada de la muestra del prompt (= tile-stone en la paleta "Aurora" de Pixtart).
+   Regla: ningún color fuera de este archivo en el CSS del sitio. */
+
+
+:root {
+  /* Fondos (de más oscuro a más claro) */
+  --c-noche:    #1E2529;
+  --c-pizarra:  #2D373C;   /* sombra de la muestra */
+  --c-acero:    #3D4A51;
+  --c-piedra:   #566972;   /* color principal de la muestra */
+  --c-piedra-c: #8196A0;   /* brillo de la muestra */
+  --c-niebla:   #BDC8CD;
+
+  /* Texto */
+  --c-texto:        #EEF2F3;  /* sobre fondos oscuros: contraste > 12:1 con --c-pizarra */
+  --c-texto-suave:  #BDC8CD;
+  --c-texto-oscuro: #1E2529;  /* sobre placas claras y botones dorados */
+
+  /* Dorado (botones, flechas, marcos, cursor) — único acento cálido */
+  --c-oro:          #D9A93A;
+  --c-oro-claro:    #F2D27A;
+  --c-oro-sombra:   #A87A1E;
+  --c-oro-contorno: #4A3510;
+
+  /* Museo */
+  --c-placa:        #ECE6D6;
+  --c-placa-borde:  #5C4A3A;
+
+  /* Tipografía: UNA sola familia en todo el sitio (pixel, pero legible en párrafos) */
+  --fuente: "Pixelify Sans", ui-monospace, "Courier New", monospace;
+  --t-xs: 0.875rem;
+  --t-s:  1rem;
+  --t-m:  1.125rem;   /* cuerpo de texto: mínimo 18 px */
+  --t-l:  1.5rem;
+  --t-xl: 2.25rem;
+  --interlineado: 1.6;
+
+  /* Espaciado en múltiplos de 4 px (rejilla pixel) */
+  --e-1: 4px;  --e-2: 8px;  --e-3: 12px; --e-4: 16px;
+  --e-6: 24px; --e-8: 32px; --e-12: 48px; --e-16: 64px;
+
+  /* Escala de los sprites: siempre enteros para que el pixel-art no se emborrone */
+  --escala-pixel: 4;
+
+  /* Movimiento */
+  --dur-rapida: 120ms;
+  --dur-media:  240ms;
+}
+
+html { font-family: var(--fuente); font-size: 16px; color: var(--c-texto); background: var(--c-pizarra); }
+body { margin: 0; font-size: var(--t-m); line-height: var(--interlineado); }
+img, object, svg { image-rendering: pixelated; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="220" height="268" viewBox="0 0 220 268" shape-rendering="crispEdges">
+<title>Picstart — Taparrabo Brote (Común)</title>
+<rect width="220" height="268" fill="#1B1F3B"/>
+<g transform="translate(24,20)"><rect x="6" y="6" width="160" height="160" fill="#2B2F55"/>
+<rect x="6" y="6" width="160" height="6" fill="#353A66"/>
+<rect x="6" y="160" width="160" height="6" fill="#1B1F3B"/>
+<rect x="86" y="38" width="8" height="8" fill="#6BBF59"/>
+<rect x="78" y="46" width="8" height="8" fill="#6BBF59"/>
+<rect x="86" y="46" width="8" height="8" fill="#3E8E41"/>
+<rect x="38" y="54" width="96" height="8" fill="#2A1A0E"/>
+<rect x="38" y="62" width="8" height="8" fill="#2A1A0E"/>
+<rect x="46" y="62" width="32" height="8" fill="#C9A66B"/>
+<rect x="78" y="62" width="8" height="8" fill="#6BBF59"/>
+<rect x="86" y="62" width="40" height="8" fill="#C9A66B"/>
+<rect x="126" y="62" width="8" height="8" fill="#2A1A0E"/>
+<rect x="38" y="70" width="96" height="8" fill="#2A1A0E"/>
+<rect x="46" y="78" width="8" height="8" fill="#2A1A0E"/>
+<rect x="54" y="78" width="64" height="8" fill="#8B5A2B"/>
+<rect x="118" y="78" width="8" height="8" fill="#2A1A0E"/>
+<rect x="46" y="86" width="8" height="8" fill="#2A1A0E"/>
+<rect x="54" y="86" width="8" height="8" fill="#8B5A2B"/>
+<rect x="62" y="86" width="8" height="8" fill="#5C3A1A"/>
+<rect x="70" y="86" width="32" height="8" fill="#8B5A2B"/>
+<rect x="102" y="86" width="8" height="8" fill="#5C3A1A"/>
+<rect x="110" y="86" width="8" height="8" fill="#8B5A2B"/>
+<rect x="118" y="86" width="8" height="8" fill="#2A1A0E"/>
+<rect x="54" y="94" width="8" height="8" fill="#2A1A0E"/>
+<rect x="62" y="94" width="48" height="8" fill="#8B5A2B"/>
+<rect x="110" y="94" width="8" height="8" fill="#2A1A0E"/>
+<rect x="54" y="102" width="8" height="8" fill="#2A1A0E"/>
+<rect x="62" y="102" width="8" height="8" fill="#8B5A2B"/>
+<rect x="70" y="102" width="8" height="8" fill="#5C3A1A"/>
+<rect x="78" y="102" width="16" height="8" fill="#8B5A2B"/>
+<rect x="94" y="102" width="8" height="8" fill="#5C3A1A"/>
+<rect x="102" y="102" width="8" height="8" fill="#8B5A2B"/>
+<rect x="110" y="102" width="8" height="8" fill="#2A1A0E"/>
+<rect x="54" y="110" width="8" height="8" fill="#2A1A0E"/>
+<rect x="62" y="110" width="48" height="8" fill="#8B5A2B"/>
+<rect x="110" y="110" width="8" height="8" fill="#2A1A0E"/>
+<rect x="62" y="118" width="8" height="8" fill="#2A1A0E"/>
+<rect x="70" y="118" width="32" height="8" fill="#8B5A2B"/>
+<rect x="102" y="118" width="8" height="8" fill="#2A1A0E"/>
+<rect x="62" y="126" width="8" height="8" fill="#2A1A0E"/>
+<rect x="70" y="126" width="8" height="8" fill="#8B5A2B"/>
+<rect x="78" y="126" width="16" height="8" fill="#5C3A1A"/>
+<rect x="94" y="126" width="8" height="8" fill="#8B5A2B"/>
+<rect x="102" y="126" width="8" height="8" fill="#2A1A0E"/>
+<rect x="70" y="134" width="32" height="8" fill="#2A1A0E"/>
+<rect x="6" y="0" width="160" height="6" fill="#B8B8B8"/>
+<rect x="6" y="166" width="160" height="6" fill="#B8B8B8"/>
+<rect x="0" y="6" width="6" height="160" fill="#B8B8B8"/>
+<rect x="166" y="6" width="6" height="160" fill="#B8B8B8"/>
+<rect x="6" y="6" width="6" height="6" fill="#B8B8B8"/>
+<rect x="160" y="6" width="6" height="6" fill="#B8B8B8"/>
+<rect x="6" y="160" width="6" height="6" fill="#B8B8B8"/>
+<rect x="160" y="160" width="6" height="6" fill="#B8B8B8"/></g>
+<text x="110" y="218" font-family="'Press Start 2P', monospace" font-size="10" fill="#FFF6D8" text-anchor="middle">Taparrabo Brote</text>
+<text x="110" y="238" font-family="'Press Start 2P', monospace" font-size="8" fill="#B8B8B8" text-anchor="middle">Evo 1 · Brote</text>
+<text x="110" y="256" font-family="'Press Start 2P', monospace" font-size="7" fill="#B8B8B8" text-anchor="middle">COMÚN</text>
+</svg>

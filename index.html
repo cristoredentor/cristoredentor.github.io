@@ -1,10 +1,326 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8">
-    <title>Cristopher</title>
-  </head>
-  <body>
-    <h1>Hola mundo</h1>
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cristopher Góngora</title>
+  <meta name="description" content="Cristopher Góngora · Ciencia de Datos · Ingeniería en Computación · ITAM">
+  <meta name="theme-color" content="#1E2529">
+  <link rel="icon" href="assets/ui/cursor-menu.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400;500;700&display=swap">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/sitio.css">
+  <link rel="preload" as="image" href="assets/personajes/cristopher/cristopher-hoja.svg">
+</head>
+<body>
+  <a class="saltar" href="#contenido">Saltar al contenido</a>
+
+  <!-- Barra de las pantallas interiores (se oculta en #inicio) -->
+  <header class="barra" hidden>
+    <a class="boton-oro boton-oro--chico" href="#inicio" data-volver>
+      <span aria-hidden="true">◀</span> <span class="inicio-txt">Inicio</span>
+    </a>
+    <nav class="barra__nav" aria-label="Secciones">
+      <ul>
+        <li><a href="#quien-soy/resumen" data-seccion="quien-soy">¿Quién soy?</a></li>
+        <li><a href="#proyectos/pixtart" data-seccion="proyectos">Proyectos</a></li>
+        <li><a href="#carrera" data-seccion="carrera">Carrera</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="contenido">
+
+    <!-- ============================== 0. INICIO ============================== -->
+    <section id="pantalla-inicio" class="pantalla pantalla-inicio" data-pantalla="inicio" aria-labelledby="titulo-inicio">
+      <div class="inicio__rejilla">
+        <div class="inicio__escenario">
+        <div class="escena" aria-hidden="true">
+          <div class="escena__lienzo">
+            <div class="capa" data-profundidad="0"><img src="assets/fondos/inicio/capa-1-cielo-sol.svg" alt="" width="320" height="180"></div>
+            <div class="capa" data-profundidad="1" data-svg="assets/fondos/inicio/capa-2-nubes.svg"></div>
+            <div class="capa" data-profundidad="2"><img src="assets/fondos/inicio/capa-3-montanas.svg" alt="" width="320" height="180"></div>
+            <div class="capa" data-profundidad="3"><img src="assets/fondos/inicio/capa-4-colinas.svg" alt="" width="320" height="180"></div>
+            <div class="capa" data-profundidad="4" data-svg="assets/fondos/inicio/capa-5-arboles-fondo.svg"></div>
+            <div class="capa" data-profundidad="5" data-svg="assets/fondos/inicio/capa-6-pasto-arboles-frente.svg"></div>
+            <div class="capa capa--viento" data-profundidad="6" data-svg="assets/fondos/inicio/capa-7-viento-hojas.svg"></div>
+          </div>
+        </div>
+        <div class="inicio__titulo panel">
+          <h1 id="titulo-inicio">Cristopher Góngora</h1>
+          <p class="inicio__subtitulo" data-borrador>Ciencia de Datos · Ingeniería en Computación · ITAM</p>
+        </div>
+
+        <div class="inicio__heroe">
+          <div class="grupo-pj">
+            <img class="mascota mascota--zorro" src="assets/mascotas/ember-fox.svg" alt="" width="16" height="16">
+            <div class="pj pj--saluda" role="img" aria-label="Cristopher, personaje pixel-art rubio con ropa casual, saludando"></div>
+            <img class="mascota mascota--buho" src="assets/mascotas/crystal-owl.svg" alt="" width="12" height="13">
+            <img class="mascota mascota--golem" src="assets/mascotas/mini-golem.svg" alt="" width="16" height="16">
+          </div>
+        </div>
+        </div>
+
+        <nav class="menu panel" aria-label="Menú principal">
+          <ul class="menu__lista" role="list">
+            <li class="menu__item menu__item--sub">
+              <button type="button" class="menu__boton" aria-expanded="false" aria-controls="submenu-quien-soy">
+                <img src="assets/ui/iconos/icono-quien-soy.svg" alt="" width="32" height="32">
+                <span>¿Quién soy?</span>
+              </button>
+              <ul class="submenu panel" id="submenu-quien-soy" role="list" hidden>
+                <li><a class="submenu__opcion" href="#quien-soy/resumen">Resumen</a></li>
+                <li><a class="submenu__opcion" href="#quien-soy/fotos">Fotos</a></li>
+              </ul>
+            </li>
+            <li class="menu__item">
+              <a class="menu__boton" href="#proyectos/pixtart">
+                <img src="assets/ui/iconos/icono-proyectos.svg" alt="" width="32" height="32">
+                <span>Proyectos</span>
+              </a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__boton" href="#carrera">
+                <img src="assets/ui/iconos/icono-carrera.svg" alt="" width="32" height="32">
+                <span>Carrera</span>
+              </a>
+            </li>
+          </ul>
+          <p class="menu__pista" data-borrador>Usa ↑ ↓ y Enter, o haz clic</p>
+        </nav>
+      </div>
+    </section>
+
+    <!-- ============================== 1. ¿QUIÉN SOY? ============================== -->
+    <section id="pantalla-quien-soy" class="pantalla pantalla-museo" data-pantalla="quien-soy" aria-labelledby="titulo-quien-soy" hidden>
+      <div class="contenedor">
+        <h2 id="titulo-quien-soy" class="titulo-pantalla" tabindex="-1">¿Quién soy?</h2>
+        <nav class="pestanas" aria-label="¿Quién soy?">
+          <a href="#quien-soy/resumen" data-sub="resumen">Resumen</a>
+          <a href="#quien-soy/fotos" data-sub="fotos">Fotos</a>
+        </nav>
+
+        <div class="galeria" id="fotos" tabindex="-1" aria-label="Fotos" role="region">
+          <figure class="cuadro cuadro--h">
+            <button type="button" class="cuadro__marco" data-lightbox="fotos" data-titulo="Compañía andina">
+              <img src="assets/fotos/miniaturas/foto-1-alpaca.jpg" data-full="assets/fotos/foto-1-alpaca.jpg" alt="Cristopher recostado en el pasto junto a una alpaca" width="640" height="480" loading="lazy" decoding="async">
+            </button>
+            <figcaption class="mini-cedula" data-borrador>Compañía andina</figcaption>
+          </figure>
+          <figure class="cuadro cuadro--v">
+            <button type="button" class="cuadro__marco" data-lightbox="fotos" data-titulo="Machu Picchu">
+              <img src="assets/fotos/miniaturas/foto-3-machu-picchu.jpg" data-full="assets/fotos/foto-3-machu-picchu.jpg" alt="Cristopher de pie frente a Machu Picchu y sus montañas" width="480" height="640" loading="lazy" decoding="async">
+            </button>
+            <figcaption class="mini-cedula" data-borrador>Machu Picchu</figcaption>
+          </figure>
+          <figure class="cuadro cuadro--v">
+            <button type="button" class="cuadro__marco" data-lightbox="fotos" data-titulo="Montaña de colores">
+              <img src="assets/fotos/miniaturas/foto-4-montana-de-colores.jpg" data-full="assets/fotos/foto-4-montana-de-colores.jpg" alt="Cristopher con los brazos abiertos en una cresta de montaña rojiza" width="480" height="640" loading="lazy" decoding="async">
+            </button>
+            <figcaption class="mini-cedula" data-borrador>Montaña de colores</figcaption>
+          </figure>
+          <figure class="cuadro cuadro--v">
+            <button type="button" class="cuadro__marco" data-lightbox="fotos" data-titulo="Laguna entre montañas">
+              <img src="assets/fotos/miniaturas/foto-5-laguna.jpg" data-full="assets/fotos/foto-5-laguna.jpg" alt="Laguna turquesa entre montañas nevadas y rocas" width="480" height="640" loading="lazy" decoding="async">
+            </button>
+            <figcaption class="mini-cedula" data-borrador>Laguna entre montañas</figcaption>
+          </figure>
+          <figure class="cuadro cuadro--h">
+            <button type="button" class="cuadro__marco" data-lightbox="fotos" data-titulo="Noche de futbol">
+              <img src="assets/fotos/miniaturas/foto-2-estadio.jpg" data-full="assets/fotos/foto-2-estadio.jpg" alt="Cristopher en las gradas de un estadio iluminado de noche" width="640" height="480" loading="lazy" decoding="async">
+            </button>
+            <figcaption class="mini-cedula" data-borrador>Noche de futbol</figcaption>
+          </figure>
+        </div>
+
+        <article class="cedula" id="resumen" tabindex="-1" aria-labelledby="titulo-cedula">
+          <h3 id="titulo-cedula">Cristopher Góngora</h3>
+          <p>Me considero una persona apasionada. Estudio computación y ciencia de datos porque creo que se
+          puede hacer un gran impacto en el mundo por medio del uso correcto de las tecnologías. Mis
+          proyectos trato de hacerlos con cariño, pues soy de la idea de que hay que disfrutar lo que
+          hacemos, aparte uno siempre puede hacer más de lo que los demás esperan y añadir a lo que hace un
+          toque artístico. Me gusta mucho subir montañas, admirar paisajes, jugar futbol, ir al gimnasio y
+          leer o hablar sobre temas filosóficos.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============================== 2. PROYECTOS ============================== -->
+    <section id="pantalla-proyectos" class="pantalla pantalla-proyectos" data-pantalla="proyectos" aria-labelledby="titulo-proyectos" hidden>
+      <div class="contenedor">
+        <h2 id="titulo-proyectos" class="titulo-pantalla" tabindex="-1">Proyectos</h2>
+
+        <div class="carrusel" aria-roledescription="carrusel" aria-label="Proyectos">
+          <button type="button" class="carrusel__flecha carrusel__flecha--izq" data-dir="-1" aria-label="Proyecto anterior">
+            <img src="assets/ui/flecha-dorada-izquierda.svg" alt="" width="64" height="64" loading="lazy">
+          </button>
+
+          <div class="carrusel__vista">
+            <div class="carrusel__pista">
+
+              <article class="proyecto" id="proyecto-pixtart" data-proyecto="pixtart" aria-roledescription="diapositiva" aria-label="1 de 2: Pixtart">
+                <div class="proyecto__encabezado">
+                  <img src="assets/fondos/pixtart-aula/pixtart-aula-escena.svg" alt="Escena pixel-art de Pixtart: un maestro búho frente al pizarrón y cinco alumnos en sus pupitres" width="320" height="140" loading="lazy">
+                </div>
+                <div class="proyecto__texto panel" data-borrador>
+                  <h3>Pixtart <span class="proyecto__lema">— <em>Aprender cualquier tema mientras juegas.</em></span></h3>
+                  <p>Pixtart es una plataforma de aprendizaje gamificada que busca hacer entretenido aprender temas
+                  que pueden llegar a ser muy complejos. Combina un camino de lecciones con un mundo pixel-art de
+                  aventura: cada tema es una sección con niveles, vidas y cofres de recompensa, y termina en un
+                  <strong>nivel final</strong> —un juego 2D donde cada monstruo es una pregunta bajo presión de tiempo—.</p>
+                  <ul class="lista-oro">
+                    <li><strong>Constancia con consecuencias visibles:</strong> el personaje evoluciona (de <em>Brote</em> a <em>Leyenda</em>) al
+                      acertar y estudiar a diario, y retrocede si se pierden todas las vidas de una sección.</li>
+                    <li><strong>Incentivos para guiar el aprendizaje:</strong> cofres normales y legendarios, mascotas, personajes de
+                      apoyo, atuendos y paletas de color que se desbloquean jugando.</li>
+                    <li><strong>Arena multijugador:</strong> duelos por tema donde gana quien responde primero y correcto.</li>
+                    <li><strong>Temas iniciales:</strong> Git/GitHub, Regex, Docker, APIs y Agentes, cada uno con su propio bioma.</li>
+                    <li><strong>Diseño:</strong> arte 100 % original, especificado con OpenSpec (propuestas, diseño y escenarios
+                      verificables) antes de escribir código.</li>
+                  </ul>
+                  <p class="proyecto__rol">Rol: <em>Creador — diseño de producto, mecánicas, arte pixel-art y especificación técnica.</em></p>
+                </div>
+              </article>
+
+              <article class="proyecto" id="proyecto-agnis" data-proyecto="agnis" aria-roledescription="diapositiva" aria-label="2 de 2: Agnis">
+                <div class="proyecto__encabezado">
+                  <img src="assets/fondos/agnis/agnis-panel.svg" alt="Panel de control pixel-art: agentes con barras de permisos, un escudo con cerradura, acciones revisadas y una crítica, una línea de tiempo y un reporte impreso" width="320" height="140" loading="lazy">
+                </div>
+                <div class="proyecto__texto panel" data-borrador>
+                  <h3>Agnis <span class="proyecto__lema">— <em>Cofundador</em></span></h3>
+                  <p>Agnis es una startup fundada con el objetivo de hacer seguro el uso de agentes de IA, evitando
+                  problemas de ciberseguridad. Buscamos que desplegar agentes sea intuitivo, con una interfaz
+                  amigable que te ayude a ver:</p>
+                  <ul class="lista-oro">
+                    <li><strong>Permisos:</strong> qué puede hacer cada agente y sobre qué recursos.</li>
+                    <li><strong>Acciones críticas:</strong> las operaciones sensibles, señaladas antes de que ocurran.</li>
+                    <li><strong>Flujo de trabajo real:</strong> lo que el agente hizo (pasado) y lo que planea hacer (futuro).</li>
+                    <li><strong>Reportes confiables:</strong> evidencia clara para auditar y tomar decisiones.</li>
+                  </ul>
+                </div>
+              </article>
+
+            </div>
+          </div>
+
+          <button type="button" class="carrusel__flecha carrusel__flecha--der" data-dir="1" aria-label="Proyecto siguiente">
+            <img src="assets/ui/flecha-dorada-derecha.svg" alt="" width="64" height="64" loading="lazy">
+          </button>
+
+          <p class="carrusel__indicador" aria-live="polite"><span data-pos>1</span>/<span data-total>2</span></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================== 3. CARRERA ============================== -->
+    <section id="pantalla-carrera" class="pantalla pantalla-carrera" data-pantalla="carrera" aria-labelledby="titulo-carrera" hidden>
+      <div class="contenedor">
+        <h2 id="titulo-carrera" class="titulo-pantalla" tabindex="-1">Carrera</h2>
+
+        <section class="ficha panel" aria-labelledby="titulo-ficha" data-borrador>
+          <div class="ficha__retrato" aria-hidden="true"><div class="pj pj--quieto"></div></div>
+          <div class="ficha__datos">
+            <h3 id="titulo-ficha">Ficha del jugador</h3>
+            <dl>
+              <div><dt>Estudios:</dt><dd>Ciencia de Datos e Ingeniería y Ciencias de la Computación — ITAM.</dd></div>
+              <div><dt>Semestre:</dt><dd>quinto.</dd></div>
+              <div><dt>Lenguajes:</dt><dd class="chips"><span>C</span><span>Python</span><span>Java</span><span>R</span></dd></div>
+              <div><dt>Datos y herramientas:</dt><dd class="chips"><span>SQL</span><span>Tableau</span><span>Excel</span></dd></div>
+            </dl>
+          </div>
+        </section>
+
+        <section class="nivel-bloque" aria-labelledby="titulo-logros">
+          <h3 id="titulo-logros">Logros</h3>
+          <div class="nivel" tabindex="-1">
+            <div class="nivel__mundo" data-svg="assets/fondos/nivel-final/nivel-final-carrera.svg" aria-hidden="true"></div>
+            <ol class="nivel__cofres" role="list">
+              <li style="--x: 36"><button type="button" class="cofre cofre--legendario" data-logro="0" aria-controls="logro-0" aria-label="Logro 1: Beca Baillères (ITAM)"><span class="cofre__sprite" style="background-image:url(assets/ui/chest-legendary-hoja.svg)"></span></button></li>
+              <li style="--x: 100"><button type="button" class="cofre cofre--legendario" data-logro="1" aria-controls="logro-1" aria-label="Logro 2: Reconocimiento a alto rendimiento académico 2026, Ciencia de Datos"><span class="cofre__sprite" style="background-image:url(assets/ui/chest-legendary-hoja.svg)"></span></button></li>
+              <li style="--x: 196"><button type="button" class="cofre cofre--legendario" data-logro="2" aria-controls="logro-2" aria-label="Logro 3: Reconocimiento a alto rendimiento académico 2026, Ingeniería y Ciencias de la Computación"><span class="cofre__sprite" style="background-image:url(assets/ui/chest-legendary-hoja.svg)"></span></button></li>
+              <li style="--x: 260"><button type="button" class="cofre" data-logro="3" aria-controls="logro-3" aria-label="Logro 4: EPIC Entrepreneurship &amp; Innovation Bootcamp (ITAM)"><span class="cofre__sprite" style="background-image:url(assets/ui/chest-normal-hoja.svg)"></span></button></li>
+              <li style="--x: 312"><button type="button" class="cofre" data-logro="4" aria-controls="logro-4" aria-label="Logro 5: Datatón ITAM"><span class="cofre__sprite" style="background-image:url(assets/ui/chest-normal-hoja.svg)"></span></button></li>
+            </ol>
+            <div class="pj pj--jugador" aria-hidden="true"></div>
+          </div>
+
+          <ol class="logros" aria-live="polite">
+            <li class="logro panel" id="logro-0">
+              <p class="logro__num" aria-hidden="true">1/5</p>
+              <p class="logro__texto"><strong>Beca Baillères (ITAM)</strong> — cubre la totalidad del costo de la carrera.</p>
+              <button type="button" class="boton-oro boton-oro--chico" data-abre-diploma="itam-beca-bailleres">Ver diploma</button>
+            </li>
+            <li class="logro panel" id="logro-1">
+              <p class="logro__num" aria-hidden="true">2/5</p>
+              <p class="logro__texto"><strong>Reconocimiento a alto rendimiento académico 2026</strong> — Licenciatura en Ciencia de Datos (ITAM).</p>
+              <button type="button" class="boton-oro boton-oro--chico" data-abre-diploma="itam-alto-rendimiento-ciencia-de-datos">Ver diploma</button>
+            </li>
+            <li class="logro panel" id="logro-2">
+              <p class="logro__num" aria-hidden="true">3/5</p>
+              <p class="logro__texto"><strong>Reconocimiento a alto rendimiento académico 2026</strong> — Ingeniería y Ciencias de la Computación (ITAM).</p>
+              <button type="button" class="boton-oro boton-oro--chico" data-abre-diploma="itam-alto-rendimiento-computacion">Ver diploma</button>
+            </li>
+            <li class="logro panel" id="logro-3">
+              <p class="logro__num" aria-hidden="true">4/5</p>
+              <p class="logro__texto"><strong>EPIC Entrepreneurship &amp; Innovation Bootcamp (ITAM)</strong> — curso intensivo de dos semanas para potenciar ideas de emprendimiento (15–27 de junio de 2026).</p>
+              <button type="button" class="boton-oro boton-oro--chico" data-abre-diploma="itam-bootcamp-emprendimiento-epic-lab">Ver diploma</button>
+            </li>
+            <li class="logro panel" id="logro-4">
+              <p class="logro__num" aria-hidden="true">5/5</p>
+              <p class="logro__texto"><strong>Datatón ITAM</strong> — participación en la ronda eliminatoria.</p>
+              <button type="button" class="boton-oro boton-oro--chico" data-abre-diploma="itam-dataton">Ver diploma</button>
+            </li>
+          </ol>
+        </section>
+
+        <section class="diplomas" aria-labelledby="titulo-diplomas">
+          <h3 id="titulo-diplomas">Diplomas</h3>
+          <ul class="diplomas__rejilla" role="list">
+            <li><button type="button" class="diploma" data-lightbox="diplomas" id="diploma-itam-beca-bailleres" data-titulo="Beca Baillères" data-emisor="ITAM"><span class="diploma__marco"><img src="assets/diplomas/miniaturas/itam-beca-bailleres.jpg" data-full="assets/diplomas/img/itam-beca-bailleres.jpg" alt="Carta de la Beca Baillères del ITAM" width="428" height="560" loading="lazy" decoding="async"></span><span class="diploma__titulo">Beca Baillères</span><span class="diploma__emisor">ITAM</span></button></li>
+            <li><button type="button" class="diploma" data-lightbox="diplomas" id="diploma-itam-alto-rendimiento-ciencia-de-datos" data-titulo="Alto rendimiento académico 2026 — Ciencia de Datos" data-emisor="ITAM" data-pdf="assets/diplomas/pdf/itam-alto-rendimiento-ciencia-de-datos.pdf"><span class="diploma__marco"><img src="assets/diplomas/miniaturas/itam-alto-rendimiento-ciencia-de-datos.jpg" data-full="assets/diplomas/img/itam-alto-rendimiento-ciencia-de-datos.jpg" alt="Diploma de alto rendimiento académico 2026 en Ciencia de Datos, ITAM" width="560" height="418" loading="lazy" decoding="async"></span><span class="diploma__titulo">Alto rendimiento académico 2026 — Ciencia de Datos</span><span class="diploma__emisor">ITAM</span></button></li>
+            <li><button type="button" class="diploma" data-lightbox="diplomas" id="diploma-itam-alto-rendimiento-computacion" data-titulo="Alto rendimiento académico 2026 — Ing. y Ciencias de la Computación" data-emisor="ITAM" data-pdf="assets/diplomas/pdf/itam-alto-rendimiento-computacion.pdf"><span class="diploma__marco"><img src="assets/diplomas/miniaturas/itam-alto-rendimiento-computacion.jpg" data-full="assets/diplomas/img/itam-alto-rendimiento-computacion.jpg" alt="Diploma de alto rendimiento académico 2026 en Ingeniería y Ciencias de la Computación, ITAM" width="560" height="428" loading="lazy" decoding="async"></span><span class="diploma__titulo">Alto rendimiento académico 2026 — Ing. y Ciencias de la Computación</span><span class="diploma__emisor">ITAM</span></button></li>
+            <li><button type="button" class="diploma" data-lightbox="diplomas" id="diploma-itam-bootcamp-emprendimiento-epic-lab" data-titulo="Entrepreneurship &amp; Innovation Bootcamp" data-emisor="EPIC Lab ITAM" data-pdf="assets/diplomas/pdf/itam-bootcamp-emprendimiento-epic-lab.pdf"><span class="diploma__marco"><img src="assets/diplomas/miniaturas/itam-bootcamp-emprendimiento-epic-lab.jpg" data-full="assets/diplomas/img/itam-bootcamp-emprendimiento-epic-lab.jpg" alt="Diploma del Entrepreneurship &amp; Innovation Bootcamp, EPIC Lab ITAM" width="560" height="434" loading="lazy" decoding="async"></span><span class="diploma__titulo">Entrepreneurship &amp; Innovation Bootcamp</span><span class="diploma__emisor">EPIC Lab ITAM</span></button></li>
+            <li><button type="button" class="diploma" data-lightbox="diplomas" id="diploma-itam-dataton" data-titulo="Datatón — ronda eliminatoria" data-emisor="ITAM · INEGI · ANTAD" data-pdf="assets/diplomas/pdf/itam-dataton.pdf"><span class="diploma__marco"><img src="assets/diplomas/miniaturas/itam-dataton.jpg" data-full="assets/diplomas/img/itam-dataton.jpg" alt="Constancia del Datatón, ronda eliminatoria, ITAM, INEGI y ANTAD" width="560" height="422" loading="lazy" decoding="async"></span><span class="diploma__titulo">Datatón — ronda eliminatoria</span><span class="diploma__emisor">ITAM · INEGI · ANTAD</span></button></li>
+            <li><button type="button" class="diploma" data-lightbox="diplomas" id="diploma-harvardx-cs50x" data-titulo="CS50x: Introduction to Computer Science" data-emisor="HarvardX (edX)" data-pdf="assets/diplomas/pdf/harvardx-cs50x.pdf"><span class="diploma__marco"><img src="assets/diplomas/miniaturas/harvardx-cs50x.jpg" data-full="assets/diplomas/img/harvardx-cs50x.jpg" alt="Certificado CS50x: Introduction to Computer Science, HarvardX en edX" width="560" height="352" loading="lazy" decoding="async"></span><span class="diploma__titulo">CS50x: Introduction to Computer Science</span><span class="diploma__emisor">HarvardX (edX)</span></button></li>
+            <li><button type="button" class="diploma" data-lightbox="diplomas" id="diploma-upv-excel-xls101x" data-titulo="Excel: Fundamentos y herramientas (XLS101x)" data-emisor="UPValenciaX (edX)" data-pdf="assets/diplomas/pdf/upv-excel-xls101x.pdf"><span class="diploma__marco"><img src="assets/diplomas/miniaturas/upv-excel-xls101x.jpg" data-full="assets/diplomas/img/upv-excel-xls101x.jpg" alt="Certificado Excel: Fundamentos y herramientas (XLS101x), UPValenciaX en edX" width="560" height="365" loading="lazy" decoding="async"></span><span class="diploma__titulo">Excel: Fundamentos y herramientas (XLS101x)</span><span class="diploma__emisor">UPValenciaX (edX)</span></button></li>
+            <li><button type="button" class="diploma" data-lightbox="diplomas" id="diploma-upv-excel-xls201x" data-titulo="Excel: gestión de datos (XLS201x)" data-emisor="UPValenciaX (edX)" data-pdf="assets/diplomas/pdf/upv-excel-xls201x.pdf"><span class="diploma__marco"><img src="assets/diplomas/miniaturas/upv-excel-xls201x.jpg" data-full="assets/diplomas/img/upv-excel-xls201x.jpg" alt="Certificado Excel: gestión de datos (XLS201x), UPValenciaX en edX" width="560" height="365" loading="lazy" decoding="async"></span><span class="diploma__titulo">Excel: gestión de datos (XLS201x)</span><span class="diploma__emisor">UPValenciaX (edX)</span></button></li>
+            <li><button type="button" class="diploma" data-lightbox="diplomas" id="diploma-upv-excel-xls202x" data-titulo="Excel avanzado: importación y análisis de datos (XLS202x)" data-emisor="UPValenciaX (edX)" data-pdf="assets/diplomas/pdf/upv-excel-xls202x.pdf"><span class="diploma__marco"><img src="assets/diplomas/miniaturas/upv-excel-xls202x.jpg" data-full="assets/diplomas/img/upv-excel-xls202x.jpg" alt="Certificado Excel avanzado: importación y análisis de datos (XLS202x), UPValenciaX en edX" width="560" height="379" loading="lazy" decoding="async"></span><span class="diploma__titulo">Excel avanzado: importación y análisis de datos (XLS202x)</span><span class="diploma__emisor">UPValenciaX (edX)</span></button></li>
+            <li><button type="button" class="diploma" data-lightbox="diplomas" id="diploma-datacamp-introduction-to-python-for-developers" data-titulo="Introduction to Python for Developers" data-emisor="DataCamp" data-pdf="assets/diplomas/pdf/datacamp-introduction-to-python-for-developers.pdf"><span class="diploma__marco"><img src="assets/diplomas/miniaturas/datacamp-introduction-to-python-for-developers.jpg" data-full="assets/diplomas/img/datacamp-introduction-to-python-for-developers.jpg" alt="Certificado Introduction to Python for Developers, DataCamp" width="560" height="324" loading="lazy" decoding="async"></span><span class="diploma__titulo">Introduction to Python for Developers</span><span class="diploma__emisor">DataCamp</span></button></li>
+            <li><button type="button" class="diploma" data-lightbox="diplomas" id="diploma-datacamp-intermediate-python-for-developers" data-titulo="Intermediate Python for Developers" data-emisor="DataCamp" data-pdf="assets/diplomas/pdf/datacamp-intermediate-python-for-developers.pdf"><span class="diploma__marco"><img src="assets/diplomas/miniaturas/datacamp-intermediate-python-for-developers.jpg" data-full="assets/diplomas/img/datacamp-intermediate-python-for-developers.jpg" alt="Certificado Intermediate Python for Developers, DataCamp" width="560" height="324" loading="lazy" decoding="async"></span><span class="diploma__titulo">Intermediate Python for Developers</span><span class="diploma__emisor">DataCamp</span></button></li>
+            <li><button type="button" class="diploma" data-lightbox="diplomas" id="diploma-datacamp-introduction-to-git" data-titulo="Introduction to Git" data-emisor="DataCamp" data-pdf="assets/diplomas/pdf/datacamp-introduction-to-git.pdf"><span class="diploma__marco"><img src="assets/diplomas/miniaturas/datacamp-introduction-to-git.jpg" data-full="assets/diplomas/img/datacamp-introduction-to-git.jpg" alt="Certificado Introduction to Git, DataCamp" width="560" height="324" loading="lazy" decoding="async"></span><span class="diploma__titulo">Introduction to Git</span><span class="diploma__emisor">DataCamp</span></button></li>
+            <li><button type="button" class="diploma" data-lightbox="diplomas" id="diploma-datacamp-intermediate-git" data-titulo="Intermediate Git" data-emisor="DataCamp" data-pdf="assets/diplomas/pdf/datacamp-intermediate-git.pdf"><span class="diploma__marco"><img src="assets/diplomas/miniaturas/datacamp-intermediate-git.jpg" data-full="assets/diplomas/img/datacamp-intermediate-git.jpg" alt="Certificado Intermediate Git, DataCamp" width="560" height="324" loading="lazy" decoding="async"></span><span class="diploma__titulo">Intermediate Git</span><span class="diploma__emisor">DataCamp</span></button></li>
+            <li><button type="button" class="diploma" data-lightbox="diplomas" id="diploma-datacamp-introduction-to-docker" data-titulo="Introduction to Docker" data-emisor="DataCamp" data-pdf="assets/diplomas/pdf/datacamp-introduction-to-docker.pdf"><span class="diploma__marco"><img src="assets/diplomas/miniaturas/datacamp-introduction-to-docker.jpg" data-full="assets/diplomas/img/datacamp-introduction-to-docker.jpg" alt="Certificado Introduction to Docker, DataCamp" width="560" height="324" loading="lazy" decoding="async"></span><span class="diploma__titulo">Introduction to Docker</span><span class="diploma__emisor">DataCamp</span></button></li>
+            <li><button type="button" class="diploma" data-lightbox="diplomas" id="diploma-datacamp-intermediate-docker" data-titulo="Intermediate Docker" data-emisor="DataCamp" data-pdf="assets/diplomas/pdf/datacamp-intermediate-docker.pdf"><span class="diploma__marco"><img src="assets/diplomas/miniaturas/datacamp-intermediate-docker.jpg" data-full="assets/diplomas/img/datacamp-intermediate-docker.jpg" alt="Certificado Intermediate Docker, DataCamp" width="560" height="324" loading="lazy" decoding="async"></span><span class="diploma__titulo">Intermediate Docker</span><span class="diploma__emisor">DataCamp</span></button></li>
+            <li><button type="button" class="diploma" data-lightbox="diplomas" id="diploma-datacamp-introduction-to-fastapi" data-titulo="Introduction to FastAPI" data-emisor="DataCamp" data-pdf="assets/diplomas/pdf/datacamp-introduction-to-fastapi.pdf"><span class="diploma__marco"><img src="assets/diplomas/miniaturas/datacamp-introduction-to-fastapi.jpg" data-full="assets/diplomas/img/datacamp-introduction-to-fastapi.jpg" alt="Certificado Introduction to FastAPI, DataCamp" width="560" height="324" loading="lazy" decoding="async"></span><span class="diploma__titulo">Introduction to FastAPI</span><span class="diploma__emisor">DataCamp</span></button></li>
+          </ul>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <!-- Vista ampliada (fotos y diplomas). <dialog> modal: Esc cierra y el foco queda dentro. -->
+  <dialog class="lightbox" aria-labelledby="lightbox-titulo">
+    <div class="lightbox__caja panel">
+      <div class="lightbox__cabeza">
+        <h2 id="lightbox-titulo" class="lightbox__titulo"></h2>
+        <button type="button" class="boton-oro boton-oro--chico" data-cerrar aria-label="Cerrar">✕</button>
+      </div>
+      <div class="lightbox__cuerpo">
+        <button type="button" class="carrusel__flecha" data-paso="-1" aria-label="Anterior"><img src="assets/ui/flecha-dorada-izquierda.svg" alt="" width="48" height="48" loading="lazy"></button>
+        <figure class="lightbox__figura">
+          <img class="lightbox__img" alt="">
+          <figcaption class="lightbox__pie"></figcaption>
+        </figure>
+        <button type="button" class="carrusel__flecha" data-paso="1" aria-label="Siguiente"><img src="assets/ui/flecha-dorada-derecha.svg" alt="" width="48" height="48" loading="lazy"></button>
+      </div>
+      <p class="lightbox__acciones"><a class="boton-oro boton-oro--chico" data-pdf-enlace href="#" download hidden>Descargar PDF</a></p>
+    </div>
+  </dialog>
+
+  <script src="js/escenas.js" defer></script>
+  <script src="js/menu.js" defer></script>
+  <script src="js/router.js" defer></script>
+</body>
 </html>

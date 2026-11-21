@@ -1,0 +1,1 @@
+En este proyecto es un intento por hacer entretenido aprender ciertos temas que pueden llegar a ser muy complejos. Nuestra misión es dar varios incentivos para guiar el aprendizaje y así disfrutar el proceso de aprender.
