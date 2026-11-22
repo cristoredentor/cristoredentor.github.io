@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="96" height="96" shape-rendering="crispEdges">
+<title>Botón dorado · tile 9-slice (border-image-slice: 8)</title>
+<rect x="1" y="0" width="22" height="24" fill="#4A3510"/>
+<rect x="0" y="1" width="24" height="22" fill="#4A3510"/>
+<rect x="1" y="1" width="22" height="22" fill="#D9A93A"/>
+<rect x="2" y="2" width="20" height="2" fill="#F2D27A"/>
+<rect x="2" y="2" width="2" height="18" fill="#F2D27A"/>
+<rect x="2" y="20" width="20" height="2" fill="#A87A1E"/>
+<rect x="20" y="4" width="2" height="18" fill="#A87A1E"/>
+</svg>
